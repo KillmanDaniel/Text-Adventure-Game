@@ -58,11 +58,14 @@ body {
   border:1px solid red;
 }
 
+.jumbotron{
+  border: 1px solid pink;
+
+}
 #pic {
   width:100%;
 /*  max-width: 100vh!important;*/
   height: auto;
-  max-height: 75vh!important;
 }
 
 .terminal {
