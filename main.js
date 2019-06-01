@@ -49,6 +49,8 @@ var blockedPathMessages="Hmmm... I'm unable to go this way.";
 //player's playersInventory
 var playersInventory = [];
 
+let countKey = 0;
+
 //set the button variables
 /*var north = document.getElementById('north');
 var northInput = north.addEventListener('click', function(){
@@ -65,7 +67,7 @@ var playersInput="";
 var gameMessage="";
 
 /*creat an array of actions the game understands and a variable to stare the current aaction*/
-var actionsIKnow=["north","east","south","west","forward","right","back","left","up","down","straight","walk","inventory"];
+var actionsIKnow=["north","east","south","west","forward","right","back","left","up","down","straight","walk","inventory","joke","help"];
 var action="";
 
 //the input and output fields
@@ -211,6 +213,14 @@ function playGame(){
         gameMessage=playersInventory;
         break;
 
+      case "help":
+        gameMessage="Find out what happened by using your directions & inventory!"
+        break;
+
+      case "joke":
+        gameMessage=jokeMessages;
+        break;
+
       // case 2:
       //   alert('This is crazy!');
       //   break;
@@ -222,17 +232,23 @@ function playGame(){
 
 //special location events
 switch (mapLocation) {
-  case 4:
+  case 2:
     //alert("It's loaded!");
     enterButton.addEventListener('click',function(){
-      //alert('ew')
+      alert('ew...')
 
     });
     break;
 
   case 5:
-  if(mapLocation===5){
-    playersInventory.push('key');
+  if(mapLocation===5 && countKey==0){
+
+        //enterButton.addEventListener('click',function(){
+          gameMessage="Found a key in the sink!";
+          playersInventory.push('key');
+          countKey++;
+        //});
+
   }
     break;
 
