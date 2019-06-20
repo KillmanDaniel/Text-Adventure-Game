@@ -2,6 +2,7 @@ body {
   font-family: 'Lato', sans-serif;
   background-color: black;
   color: #f1f1f1;
+  font-size: 1em;
 }
 
 .overlay {
@@ -12,8 +13,9 @@ body {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0, 0.9);
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0 1);
+  /* background-image: image(pictures/title.jpg); */
 }
 
 .overlay-content {
@@ -47,24 +49,47 @@ body {
 }
 
 @media screen and (max-height: 450px) {
-  .overlay a {font-size: 20px}
+  .overlay a {
+    font-size: 20px
+  }
+
   .overlay .closebtn {
-  font-size: 40px;
-  top: 15px;
-  right: 35px;
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
   }
 }
-#pic-row{
-  border:1px solid red;
+
+.container-fluid {
+  border: 0.5em solid black;
 }
 
-#pic {
-  width:100%;
-/*  max-width: 100vh!important;*/
-  height: auto;
-  max-height: 75vh!important;
+.interface {
+  background-color: indigo;
 }
 
 .terminal {
-
+  text-align: center;
 }
+
+#output {
+  text-align: right;
+  font-size: 1.5em;
+}
+
+#pic-row {
+  /* border:1px solid indigo; */
+}
+
+#pic {
+  width: 100%;
+  /*  max-width: 100vh!important;*/
+  height: auto;
+  max-height: 75vh !important;
+}
+
+/* textarea {
+    overflow-y: scroll;
+    height: 100px;
+    resize: none;
+  } */
