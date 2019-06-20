@@ -48,6 +48,10 @@ body {
   font-size: 60px;
 }
 
+.overlayText {
+  font-size: 1.5em;
+}
+
 @media screen and (max-height: 450px) {
   .overlay a {
     font-size: 20px
@@ -70,11 +74,12 @@ body {
 
 .terminal {
   text-align: center;
+  font-size: 1.25em;
 }
 
 #output {
   text-align: right;
-  font-size: 1.5em;
+  font-size: 1.75em;
 }
 
 #pic-row {
